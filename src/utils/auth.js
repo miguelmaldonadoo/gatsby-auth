@@ -13,7 +13,7 @@ class Auth {
   auth0 = new auth0.WebAuth({
     domain: AUTH0_DOMAIN,
     clientID: AUTH0_CLIENT_ID,
-    redirectUri: 'https://dw-gatsby-starter.now.sh/callback',
+    redirectUri: 'https://quizzical-nightingale-51ca00.netlify.com/callback',
     audience: `https://${AUTH0_DOMAIN}/api/v2/`,
     responseType: 'token id_token',
     scope: 'openid profile email',
