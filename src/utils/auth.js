@@ -1,8 +1,8 @@
 import auth0 from 'auth0-js'
 import { navigateTo } from 'gatsby-link'
 
-const AUTH0_DOMAIN = 'gatsby-starter-dw.auth0.com'
-const AUTH0_CLIENT_ID = 'xo0i6L3aiVBz0hM5QnjMBYDppXUHeqHl'
+const AUTH0_DOMAIN = 'miguelmaldonadoo.auth0.com'
+const AUTH0_CLIENT_ID = 'YhyazTSZ514UMeiAQVzSEWcyN6X6QPo7'
 
 class Auth {
   accessToken
