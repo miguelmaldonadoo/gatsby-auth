@@ -5,7 +5,6 @@ console.log(process.env)
 
 const AUTH0_DOMAIN = 'miguelmaldonadoo.auth0.com'
 const AUTH0_CLIENT_ID = 'YhyazTSZ514UMeiAQVzSEWcyN6X6QPo7'
-const REDIRECT_URI = "http://localhost:8000/callback"
 
 class Auth {
   accessToken
@@ -16,8 +15,7 @@ class Auth {
   auth0 = new auth0.WebAuth({
     domain: AUTH0_DOMAIN,
     clientID: AUTH0_CLIENT_ID,
-    // redirectUri: 'https://quizzical-nightingale-51ca00.netlify.com/callback',
-    redirectUri:REDIRECT_URI,
+    redirectUri: 'https://quizzical-nightingale-51ca00.netlify.com/callback',
     audience: `https://${AUTH0_DOMAIN}/api/v2/`,
     responseType: 'token id_token',
     scope: 'openid profile email',
