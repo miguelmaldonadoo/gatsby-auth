@@ -47,8 +47,8 @@ class Layout extends Component {
 
 
   render() {
+
     const {authenticated} = this.state;
-    console.log(authenticated)
     const {children} = this.props;
     return (
       <div className="siteRoot">
@@ -64,10 +64,10 @@ class Layout extends Component {
           <div className="siteContent">
             <Menu auth={!authenticated?{title:'Login',action:this.login}:{title:'Logout',action:this.logout}}/>
             
-            { authenticated && children}
-            { !authenticated && <h1 style={{margin:'auto',fontSize:40}}>You need to login to see the content</h1>
-              <br>
-              <h1 style={{margin:'auto',fontSize:40}}>You need to login to see the content</h1>
+            { (authenticated || this.props.noAuth) && children}
+            {(!authenticated && !this.props.noAuth )&& <>
+              <br/>
+              <h1 style={{margin:'auto',fontSize:40}}>You need to login to see the content</h1></>
             }
           </div>
           <Footer />
@@ -78,6 +78,7 @@ class Layout extends Component {
     );
   }
 }
+
 
 export default Layout;
 

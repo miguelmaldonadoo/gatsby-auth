@@ -13,7 +13,7 @@ const Contact = ({ data }) => {
   }
 
   return (
-    <Layout>
+    <Layout noAuth>
       <Helmet>
         <title>{`Contact - ${config.siteTitle}`}</title>
       </Helmet>

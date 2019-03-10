@@ -38,6 +38,17 @@ const Nav = styled.nav`
       color: white;
     }
   }
+
+  button {
+    text-decoration: none;
+    color: DarkGray;
+    font-weight: 600;
+    transition: all 0.2s;
+    border-bottom: 2px solid ${props => props.theme.colors.base};
+    &:hover {
+      color: white;
+    }
+  }
 `
 
 const activeLinkStyle = {
@@ -66,7 +77,7 @@ const Menu = ({auth}) => {
           </li>
 
           <li>
-            <button onClick={auth.action} style={{color:'white'}}>{auth.title}</button>
+            <button onClick={auth.action}>{auth.title}</button>
           </li>
         </ul>
       </Nav>

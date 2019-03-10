@@ -13,7 +13,7 @@ const PageTemplate = ({ data }) => {
   const postNode = data.contentfulPage
 
   return (
-    <Layout>
+    <Layout noAuth>
       <Helmet>
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
