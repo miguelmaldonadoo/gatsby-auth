@@ -49,7 +49,8 @@ export const query = graphql`
     allContentfulPost(
       sort: { fields: [publishDate], order: DESC }
       limit: $limit
-      skip: $skip
+      skip: $skip,
+      filter: {node_locale:{eq:"en-US"}}
     ) {
       edges {
         node {

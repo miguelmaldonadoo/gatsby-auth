@@ -10,7 +10,8 @@ exports.createPages = ({ graphql, actions }) => {
       {
         allContentfulPost(
           sort: { fields: [publishDate], order: DESC }
-          limit: 10000
+          limit: 10000,
+          filter: {node_locale:{eq:"en-US"}}
         ) {
           edges {
             node {
@@ -22,6 +23,7 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then(result => {
       const posts = result.data.allContentfulPost.edges
+      console.log(posts)
       const postsPerFirstPage = config.postsPerHomePage
       const postsPerPage = config.postsPerPage
       const numPages = Math.ceil(
