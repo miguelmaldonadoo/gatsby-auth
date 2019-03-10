@@ -65,7 +65,10 @@ class Layout extends Component {
             <Menu auth={!authenticated?{title:'Login',action:this.login}:{title:'Logout',action:this.logout}}/>
             
             { authenticated && children}
-            { !authenticated && <h1 style={{margin:'auto',fontSize:40}}>You need to login to see the content</h1>}
+            { !authenticated && <h1 style={{margin:'auto',fontSize:40}}>You need to login to see the content</h1>
+              <br>
+              <h1 style={{margin:'auto',fontSize:40}}>You need to login to see the content</h1>
+            }
           </div>
           <Footer />
         </>
