@@ -46,32 +46,25 @@ const Footer = () => (
     <List>
       <Item>
         <a
-          href="https://www.contentful.com/"
+          href="https://www.datascienceacademy.com.mx/"
           rel="nofollow noopener noreferrer"
           target="_blank"
         >
           <img
-            src="https://images.ctfassets.net/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg"
+            src="https://res.cloudinary.com/migmal/image/upload/v1546106992/DSAM_-_Logo_yzgppi.png"
             style={{ width: '100px' }}
-            alt="Powered by Contentful"
+            alt="Product by Data Science Academy Mexico"
           />
         </a>
       </Item>
       <Item>
+        Follow us{' '}
         <a
-          href="https://github.com/ryanwiemer/gatsby-starter-gcn"
+          href="https://www.instagram.com/datasciencemx/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          gatsby-starter-gcn
-        </a>{' '}
-        by{' '}
-        <a
-          href="https://github.com/ryanwiemer"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @ryanwiemer
+          @DataScienceMX
         </a>
       </Item>
     </List>
