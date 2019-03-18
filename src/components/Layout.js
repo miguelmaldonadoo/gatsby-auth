@@ -64,7 +64,6 @@ class Layout extends Component {
           <div className="siteContent">
             <Menu auth={!authenticated?{title:'Login',action:this.login}:{title:'Logout',action:this.logout}}/>
             
-            { children }
             { (authenticated || this.props.noAuth) && children}
             {(!authenticated && !this.props.noAuth )&& <>
               <br/>
