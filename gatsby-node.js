@@ -23,7 +23,6 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then(result => {
       const posts = result.data.allContentfulPost.edges
-      console.log(posts)
       const postsPerFirstPage = config.postsPerHomePage
       const postsPerPage = config.postsPerPage
       const numPages = Math.ceil(

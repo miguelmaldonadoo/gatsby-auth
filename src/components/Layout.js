@@ -64,11 +64,12 @@ class Layout extends Component {
           <div className="siteContent">
             <Menu auth={!authenticated?{title:'Login',action:this.login}:{title:'Logout',action:this.logout}}/>
             
-            { (authenticated || this.props.noAuth) && children}
+            { children }
+            {/* { (authenticated || this.props.noAuth) && children}
             {(!authenticated && !this.props.noAuth )&& <>
               <br/>
               <h1 style={{margin:'auto',fontSize:40}}>You need to login to see the content</h1></>
-            }
+            } */}
           </div>
           <Footer />
         </>
