@@ -2,7 +2,16 @@ const config = require('./src/utils/siteConfig')
 let contentfulConfig
 
 try {
-  contentfulConfig = require('./.contentful')
+  contentfulConfig = contentfulConfig = {
+    production: {
+      spaceId: process.env.SPACE_ID,
+      accessToken: process.env.ACCESS_TOKEN,
+    },
+    development: {
+      spaceId: process.env.SPACE_ID,
+      accessToken: process.env.ACCESS_TOKEN,
+    },
+  }
 } catch (e) {
   contentfulConfig = {
     production: {
@@ -12,8 +21,6 @@ try {
   }
 } finally {
   const { spaceId, accessToken } = contentfulConfig.production
-  console.log(spaceId)
-  console.log(accessToken)
   if (!spaceId || !accessToken) {
     throw new Error('Contentful space ID and access token need to be provided.')
   }
