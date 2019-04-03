@@ -4,12 +4,14 @@ let contentfulConfig
 try {
   contentfulConfig = contentfulConfig = {
     production: {
-      spaceId: process.env.SPACE_ID,
-      accessToken: process.env.ACCESS_TOKEN,
+      spaceId: 'eoain86pyf9q',
+      accessToken:
+        '2794b52cd927c25e99183d5a709a18163915da06b527218b72f22bac10472b23',
     },
     development: {
-      spaceId: process.env.SPACE_ID,
-      accessToken: process.env.ACCESS_TOKEN,
+      spaceId: 'eoain86pyf9q',
+      accessToken:
+        '2794b52cd927c25e99183d5a709a18163915da06b527218b72f22bac10472b23',
     },
   }
 } catch (e) {
