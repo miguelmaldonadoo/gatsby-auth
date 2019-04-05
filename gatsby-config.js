@@ -2,24 +2,12 @@ const config = require('./src/utils/siteConfig')
 let contentfulConfig
 
 try {
-  contentfulConfig = contentfulConfig = {
-    production: {
-      spaceId: 'eoain86pyf9q',
-      accessToken:
-        '2794b52cd927c25e99183d5a709a18163915da06b527218b72f22bac10472b23',
-    },
-    development: {
-      spaceId: 'eoain86pyf9q',
-      accessToken:
-        '2794b52cd927c25e99183d5a709a18163915da06b527218b72f22bac10472b23',
-    },
-  }
+  contentfulConfig = require('./.contentful')
 } catch (e) {
   contentfulConfig = {
     production: {
-      spaceId: 'eoain86pyf9q',
-      accessToken:
-        '2794b52cd927c25e99183d5a709a18163915da06b527218b72f22bac10472b23',
+      spaceId: process.env.SPACE_ID,
+      accessToken: process.env.ACCESS_TOKEN,
     },
   }
 } finally {
