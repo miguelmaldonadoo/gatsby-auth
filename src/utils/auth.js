@@ -15,7 +15,7 @@ class Auth {
   auth0 = new auth0.WebAuth({
     domain: AUTH0_DOMAIN,
     clientID: AUTH0_CLIENT_ID,
-    redirectUri: 'https://quizzical-nightingale-51ca00.netlify.com/callback',
+    redirectUri: 'https://awesome-goldwasser-f1b5bd.netlify.com/callback',
     audience: `https://${AUTH0_DOMAIN}/api/v2/`,
     responseType: 'token id_token',
     scope: 'openid profile email',
@@ -38,14 +38,14 @@ class Auth {
     if (typeof window !== 'undefined') {
       this.auth0.parseHash((err, authResult) => {
         if (authResult && authResult.accessToken && authResult.idToken) {
-          this.setSession(authResult);
+          this.setSession(authResult)
         } else if (err) {
-          console.log(err);
+          console.log(err)
         }
 
         // Return to the homepage after authentication.
-        navigateTo('/');
-      });
+        navigateTo('/')
+      })
     }
   }
 
